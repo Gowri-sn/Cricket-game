@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Game</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <main>
+    <h1>Bat Ball Stump Game</h1>
+
+    <!--Bat button-->
+    <button class="button-" onclick="
+    //console.log('You have choosen bat')
+
+    const userMsg = 'You have choosen bat';
+   let computerChoice =  generateComputerChoice();
+   
+   // console.log(`Computer choice is ${computerChoice}`);
+   const computerMsg = `Computer choice is ${computerChoice}`;
+
+   let result = getResult('Bat',computerChoice);
+   
+    ShowResult('Bat',computerMsg, result );
+     ">Bat</button>
+
+     <!--Ball button -->
+    <button class="button-" onclick="  userMsg = 'You have choosen ball';
+    computerChoice = generateComputerChoice();
+   // console.log(`Computer choice is ${computerChoice}`);
+   computerMsg = `Computer choice is ${computerChoice}`;
+
+   result = getResult('Ball', computerChoice);
+    ShowResult('Ball', computerMsg, result);
+    
+    ">Ball</button>
+
+    <!-- Stump button-->
+    <button  class="button-"
+    onclick="
+    //console.log('You have choosen bat')
+     userMsg = 'You have choosen Stump';
+    computerChoice= generateComputerChoice();
+   // console.log(`Computer choice is ${computerChoice}`);
+    computerMsg = `Computer choice is ${computerChoice}`;
+
+      result = getResult('Stump', computerChoice);
+      ShowResult('Stump', computerMsg, result);
+    
+    ">Stump</button>
+
+  </main>
+
+  <script src="script.js">
+   
+  </script>
+  
+</body>
+</html>
