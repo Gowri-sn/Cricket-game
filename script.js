@@ -2,6 +2,9 @@ let score = {
   win: 0,
   lost: 0,
   tie: 0,
+  displayScore : function(){
+    return `Result: No of matches Won ${score.win} Tie ${score.tie} Lost ${score.lost}`
+  }
 };
 
 function generateComputerChoice(){ 
@@ -75,5 +78,5 @@ function ShowResult(Usermove, Computermove, result){
     ` You have chosen ${Usermove} ,  ${Computermove} 
        ${result} 
       
-      Result: Won ${score.win} Tie ${score.tie} Lost ${score.lost}` );
+       ${displayScore()}` );
 }
