@@ -1,11 +1,24 @@
-let score = {
-  win: 0,
-  lost: 0,
-  tie: 0,
-  displayScore : function(){
-    return `Result: No of matches Won ${score.win} Tie ${score.tie} Lost ${score.lost}`
+let scoreStr = localStorage.getItem('Score');
+let score;
+
+resetScore(scoreStr);
+
+
+function resetScore(scoreStr){
+   score = scoreStr ? JSON.parse(scoreStr) : {
+    win: 0,
+    lost: 0,
+    tie: 0,
+    
   }
-};
+      score.displayScore = function(){
+        return `Result: No of matches Won ${score.win}, Tie ${score.tie}, Lost ${score.lost}`
+      }
+    
+
+}
+
+
 
 function generateComputerChoice(){ 
   let randomNumber = Math.random() * 3;
@@ -73,6 +86,8 @@ function getResult(userMove, ComputerMove){
 }
 
 function ShowResult(Usermove, Computermove, result){
+
+  localStorage.setItem('Score', JSON.stringify(score));
   console.log(score);
   alert( 
     ` You have chosen ${Usermove} ,  ${Computermove} 
