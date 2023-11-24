@@ -12,13 +12,17 @@ function resetScore(scoreStr){
     
   }
       score.displayScore = function(){
-        return `Result: No of matches Won ${score.win}, Tie ${score.tie}, Lost ${score.lost}`
+        return `Result:  Won ${score.win}, Tie ${score.tie}, Lost ${score.lost}`
       }
     
 
 }
 
 
+
+
+
+  
 
 function generateComputerChoice(){ 
   let randomNumber = Math.random() * 3;
@@ -88,10 +92,15 @@ function getResult(userMove, ComputerMove){
 function ShowResult(Usermove, Computermove, result){
 
   localStorage.setItem('Score', JSON.stringify(score));
+
+  document.querySelector('#user-move').innerText = 
+       Usermove  ? `You have chosen ${Usermove}` : ' ';
+  document.querySelector('#computer-move').innerText = 
+     Computermove  ? ` Computer has choosen ${Computermove}` : ' ';
+  document.querySelector('#result').innerText = 
+   result  ? `${result}` : ' ';
+  document.querySelector('#score').innerText = `${score.displayScore()}`
+
   console.log(score);
-  alert( 
-    ` You have chosen ${Usermove} ,  ${Computermove} 
-       ${result} 
-      
-       ${displayScore()}` );
+  
 }

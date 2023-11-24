@@ -25,7 +25,7 @@
    let result = getResult('Bat',computerChoice);
    
     ShowResult('Bat',computerMsg, result );
-     ">Bat</button>
+     "> <img src="images/bat.png" alt="Bat image" class="choice-image"> </button>
 
      <!--Ball button -->
     <button class="button-" onclick="  userMsg = 'You have choosen ball';
@@ -36,7 +36,7 @@
    result = getResult('Ball', computerChoice);
     ShowResult('Ball', computerMsg, result);
     
-    ">Ball</button>
+    "> <img src="images/ball.png" alt="Ball image" class="choice-image"> </button>
 
     <!-- Stump button-->
     <button  class="button-"
@@ -50,11 +50,21 @@
       result = getResult('Stump', computerChoice);
       ShowResult('Stump', computerMsg, result);
     
-    ">Stump</button>
+    "> <img src="images/stump.png" alt="Stump image" class="choice-image"> </button>
+    <br>
 
-   <button class="button-" onclick="localStorage.clear() 
-    resetScore();"
-     >Reset</button>
+    
+
+    <br>
+    <h3 id="user-move"></h3>
+    <h3 id="computer-move"></h3>
+    <h3 id="result"></h3>
+    <h3 id="score"></h3>
+
+    <button class="button-" onclick="localStorage.clear() 
+    resetScore();
+    ShowResult()"
+    >Reset</button>
 
   </main>
  
